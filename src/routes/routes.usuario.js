@@ -25,7 +25,7 @@ rutaUsuario.get("/", listarUsuario)
 //crear
 rutaUsuario.post("/", crearUsuario)
 //modificar
-rutaUsuario.put("/modificar/:id", modificarUsuario)
+rutaUsuario.put("/:id", modificarUsuario)
 //modificar estado usuario
 rutaUsuario.put("/estado/:id", actualizarEstado)
 //eliminar
