@@ -15,8 +15,8 @@ var doc = {
     title: 'API Surprise',
     description: 'Descripción de la API'
   },
-  host: 'localhost:3000',
-  schemes: ['http']
+  host: 'surprisebackend.onrender.com/',
+  schemes: ['https']
 };
 var outputFile = './swagger-output.json';
 var endpointsFiles = ['../routes/index.js'];

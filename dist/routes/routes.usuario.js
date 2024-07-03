@@ -30,7 +30,7 @@ rutaUsuario.put("/:id", _controllers.modificarUsuario);
 //modificar estado usuario
 rutaUsuario.put("/estado/:id", _controllers.actualizarEstado);
 //eliminar
-rutaUsuario["delete"]("/:id", _token.verifytoken, _controllers.eliminarUsuario);
+rutaUsuario["delete"]("/:id", _controllers.eliminarUsuario);
 //login
 rutaUsuario.post("/loginusuario", _controllers.logueoUsuario);
 //Validar token
