@@ -1,0 +1,652 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Surprise",
+    "description": "Descripción de la API",
+    "version": "1.0.0"
+  },
+  "host": "surprisebackend.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/producto/{id}": {
+      "get": {
+        "description": "Obtener detalles de un producto por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "Actualizar un producto por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "producto": {
+                  "type": "string",
+                  "example": "nombre del producto"
+                },
+                "categoria": {
+                  "type": "string",
+                  "example": "categoría del producto"
+                },
+                "preciou": {
+                  "type": "number",
+                  "example": 100
+                },
+                "descripcion": {
+                  "type": "string",
+                  "example": "descripción del producto"
+                },
+                "imagen": {
+                  "type": "string",
+                  "example": "url de la imagen"
+                },
+                "stock": {
+                  "type": "number",
+                  "example": 10
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "Eliminar un producto por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/producto/": {
+      "get": {
+        "description": "Obtener todos los productos",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Crear un nuevo producto",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "producto": {
+                  "type": "string",
+                  "example": "nombre del producto"
+                },
+                "categoria": {
+                  "type": "string",
+                  "example": "categoría del producto"
+                },
+                "preciou": {
+                  "type": "number",
+                  "example": 100
+                },
+                "descripcion": {
+                  "type": "string",
+                  "example": "descripción del producto"
+                },
+                "imagen": {
+                  "type": "string",
+                  "example": "url de la imagen"
+                },
+                "stock": {
+                  "type": "number",
+                  "example": 10
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/usuario/{id}": {
+      "get": {
+        "description": "Obtener detalles de un usuario por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "Actualizar un usuario por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "contrasena": {
+                  "type": "string",
+                  "example": "nueva contraseña"
+                },
+                "identificacion": {
+                  "type": "string",
+                  "example": "nueva identificación"
+                },
+                "nombres": {
+                  "type": "string",
+                  "example": "nuevos nombres"
+                },
+                "telefono": {
+                  "type": "string",
+                  "example": "nuevo teléfono"
+                },
+                "correo": {
+                  "type": "string",
+                  "example": "nuevo correo"
+                },
+                "rol": {
+                  "type": "string",
+                  "example": "nuevo rol"
+                },
+                "estado": {
+                  "type": "string",
+                  "example": "nuevo estado"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "description": "Eliminar un usuario por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/usuario/estado/{id}": {
+      "put": {
+        "description": "Actualizar el estado de un usuario por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "estado": {
+                  "type": "string",
+                  "example": "nuevo estado"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/usuario/loginusuario": {
+      "post": {
+        "description": "Iniciar sesión de usuario",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "correo": {
+                  "type": "string",
+                  "example": "correo del usuario"
+                },
+                "contrasena": {
+                  "type": "string",
+                  "example": "contraseña del usuario"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/usuario/oauth": {
+      "post": {
+        "description": "Autenticación mediante OAuth",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/proveedor/{id}": {
+      "get": {
+        "description": "Obtener detalles de un proveedor por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "Eliminar un proveedor por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/proveedor/": {
+      "get": {
+        "description": "Obtener todos los proveedores",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Crear un nuevo proveedor",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "proveedor": {
+                  "type": "string",
+                  "example": "nombre del proveedor"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/factura/{id}": {
+      "get": {
+        "description": "Obtener detalles de una factura por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "Actualizar una factura por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idusuario": {
+                  "type": "string",
+                  "example": "ID del usuario"
+                },
+                "fecha": {
+                  "type": "string",
+                  "example": "fecha de la factura"
+                },
+                "idmetodopago": {
+                  "type": "string",
+                  "example": "ID del método de pago"
+                },
+                "estado": {
+                  "type": "string",
+                  "example": "estado de la factura"
+                },
+                "ncuenta": {
+                  "type": "string",
+                  "example": "número de cuenta"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/factura/": {
+      "get": {
+        "description": "Obtener todas las facturas",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Crear una nueva factura",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idusuario": {
+                  "type": "string",
+                  "example": "ID del usuario"
+                },
+                "fecha": {
+                  "type": "string",
+                  "example": "fecha de la factura"
+                },
+                "idmetodopago": {
+                  "type": "string",
+                  "example": "ID del método de pago"
+                },
+                "estado": {
+                  "type": "string",
+                  "example": "estado de la factura"
+                },
+                "ncuenta": {
+                  "type": "string",
+                  "example": "número de cuenta"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/metopago/{id}": {
+      "get": {
+        "description": "Obtener detalles de un método de pago por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "Eliminar un método de pago por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/metopago/": {
+      "get": {
+        "description": "Obtener todos los métodos de pago",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Crear un nuevo método de pago",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tipopago": {
+                  "type": "string",
+                  "example": "tipo de pago"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/pedido/": {
+      "get": {
+        "description": "Obtener todos los pedidos",
+        "responses": {
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/pedido/{id}": {
+      "put": {
+        "description": "Actualizar el estado de un pedido por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "estado": {
+                  "type": "string",
+                  "example": "nuevo estado del pedido"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "Eliminar un pedido por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/dashboard": {
+      "get": {
+        "description": "Obtener datos del dashboard",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/cajero": {
+      "get": {
+        "description": "Acceder al módulo de cajero",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
