@@ -26,7 +26,7 @@ rutaUsuario.get("/", _controllers.listarUsuario);
 //crear
 rutaUsuario.post("/", _controllers.crearUsuario);
 //modificar
-rutaUsuario.put("/:id", _controllers.modificarUsuario);
+rutaUsuario.put("/modificar/:id", _controllers.modificarUsuario);
 //modificar estado usuario
 rutaUsuario.put("/estado/:id", _controllers.actualizarEstado);
 //eliminar
