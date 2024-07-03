@@ -200,13 +200,13 @@ var modificarUsuario = exports.modificarUsuario = /*#__PURE__*/function () {
           contrasena = _context5.sent;
           _context5.prev = 6;
           _context5.next = 9;
-          return _mysql.pool.query("CALL SP_MODIFICAR_USUARIO (?, ?, ?, ?, ?, ?, ?, ?)", [id, identificacion, nombres, telefono, correo, contrasena, rol, estado]);
+          return _mysql.pool.query("CALL SP_MODIFICAR_USUARIO (?, ?, ?, ?, ?, ?, ?)", [id, identificacion, nombres, telefono, contrasena, rol, estado]);
         case 9:
           respuesta = _context5.sent;
           if (respuesta[0].affectedRows == 1) {
-            (0, _mensaje.Acceso)(req, res, 201, "Usuario modificado:" + correo);
+            (0, _mensaje.Acceso)(req, res, 201, "Usuario modificado:");
           } else {
-            (0, _mensaje.Error)(req, res, 400, "No se pudo modificar el usuario: " + correo);
+            (0, _mensaje.Error)(req, res, 400, "No se pudo modificar el usuario: ");
           }
           _context5.next = 16;
           break;

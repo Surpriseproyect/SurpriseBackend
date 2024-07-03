@@ -92,13 +92,12 @@ const modificarUsuario = async (req,res)=>{
     const contrasenasincifrar = req.body.contrasena;
     const contrasena = await bcrypt.hash(contrasenasincifrar, 2);
     try {
-        
-        const respuesta = await pool.query (`CALL SP_MODIFICAR_USUARIO (?, ?, ?, ?, ?, ?, ?, ?)`, [id, identificacion, nombres, telefono, correo, contrasena, rol, estado]);
+        const respuesta = await pool.query (`CALL SP_MODIFICAR_USUARIO (?, ?, ?, ?, ?, ?, ?)`, [id,identificacion, nombres, telefono, contrasena, rol, estado]);
 
         if (respuesta[0].affectedRows == 1){
-            Acceso(req, res, 201,"Usuario modificado:"  +  correo);
+            Acceso(req, res, 201,"Usuario modificado:" );
         }else{
-            Error(req, res, 400, "No se pudo modificar el usuario: "  +  correo);    
+            Error(req, res, 400, "No se pudo modificar el usuario: ");    
         }
     } catch (err) {
         Error(req, res, 400, err);
