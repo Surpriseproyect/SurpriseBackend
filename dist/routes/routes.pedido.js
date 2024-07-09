@@ -19,5 +19,5 @@ var routesPedidos = (0, _express.Router)();
 routesPedidos.get("/", _controllers.listarPedido);
 routesPedidos.put("/:id", _controllers.actualizarPedido);
 routesPedidos["delete"]("/:id", _controllers.eliminarPedido);
-routesPedidos.post("/", _controllers.crearPedido);
+routesPedidos.post("/crear", _controllers.crearPedido);
 var _default = exports["default"] = routesPedidos;

@@ -14,7 +14,7 @@ const routesPedidos = Router();
 routesPedidos.get("/", listarPedido)
 routesPedidos.put("/:id", actualizarPedido)
 routesPedidos.delete("/:id", eliminarPedido)
-routesPedidos.post("/", crearPedido)
+routesPedidos.post("/crear", crearPedido)
 
 
 export default routesPedidos;
