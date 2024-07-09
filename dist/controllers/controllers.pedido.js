@@ -87,14 +87,14 @@ var contadorPedidos = exports.contadorPedidos = /*#__PURE__*/function () {
  */
 var crearPedido = exports.crearPedido = /*#__PURE__*/function () {
   var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
-    var _req$body, _idusuario, _idproducto, _idmetodopago, _cantidad, _total, _estado, respuesta;
+    var _req$body, idusuario, idproducto, idmetodopago, cantidad, respuesta;
     return _regenerator["default"].wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          _req$body = req.body, _idusuario = _req$body._idusuario, _idproducto = _req$body._idproducto, _idmetodopago = _req$body._idmetodopago, _cantidad = _req$body._cantidad, _total = _req$body._total, _estado = _req$body._estado;
+          _req$body = req.body, idusuario = _req$body.idusuario, idproducto = _req$body.idproducto, idmetodopago = _req$body.idmetodopago, cantidad = _req$body.cantidad;
           _context3.prev = 1;
           _context3.next = 4;
-          return _mysql.pool.query("CALL SP_CREAR_PEDIDO(?, ?, ?, ?, ?, ?)", [_idusuario, _idproducto, _idmetodopago, _cantidad, _total, _estado]);
+          return _mysql.pool.query("CALL SP_CREAR_PEDIDO(?, ?, ?, ?)", [idusuario, idproducto, idmetodopago, cantidad]);
         case 4:
           respuesta = _context3.sent;
           return _context3.abrupt("return", respuesta[0]);

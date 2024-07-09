@@ -3,7 +3,7 @@
  * @module rutas
  */
 import { Router } from "express";
-import { actualizarPedido, eliminarPedido, listarPedido } from "../controllers/controllers.pedido";
+import { actualizarPedido, crearPedido, eliminarPedido, listarPedido } from "../controllers/controllers.pedido";
 
 
 const routesPedidos = Router();
@@ -14,6 +14,7 @@ const routesPedidos = Router();
 routesPedidos.get("/", listarPedido)
 routesPedidos.put("/:id", actualizarPedido)
 routesPedidos.delete("/:id", eliminarPedido)
+routesPedidos.post("/", crearPedido)
 
 
 export default routesPedidos;

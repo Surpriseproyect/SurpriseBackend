@@ -44,9 +44,9 @@ const contadorPedidos = async(req, res) => {
  * @returns 
  */
 const crearPedido = async(req, res) => {
-    const {_idusuario, _idproducto, _idmetodopago, _cantidad, _total, _estado} = req.body
+    const {idusuario, idproducto, idmetodopago, cantidad} = req.body
     try {
-        const respuesta = await pool.query("CALL SP_CREAR_PEDIDO(?, ?, ?, ?, ?, ?)", [_idusuario, _idproducto, _idmetodopago, _cantidad, _total, _estado]);
+        const respuesta = await pool.query("CALL SP_CREAR_PEDIDO(?, ?, ?, ?)", [idusuario, idproducto, idmetodopago, cantidad]);
         return respuesta[0]
     } catch (error) {
         res.status(500).json(error);        
