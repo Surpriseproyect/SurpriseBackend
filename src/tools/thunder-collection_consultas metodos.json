@@ -1,0 +1,363 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "consultas metodos",
+    "collectionId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+    "dateExported": "2024-07-17T12:59:18.800Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "62a0c645-a049-4abe-98b0-2c7109f5a1ed",
+            "name": "login",
+            "containerId": "",
+            "created": "2024-07-17T12:55:01.448Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "0a5fc7a3-55f6-40ab-b03d-4eac09992c11",
+            "name": "productos",
+            "containerId": "",
+            "created": "2024-07-17T12:55:58.560Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "9f8bc107-86b0-49e1-a774-c7f274e8a05f",
+            "name": "usuario",
+            "containerId": "",
+            "created": "2024-07-17T12:56:57.433Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "4db1a2c5-35ee-4488-ac44-de42295ba330",
+            "name": "proveedor",
+            "containerId": "",
+            "created": "2024-07-17T12:57:30.622Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "c9a5ae56-f092-4fc6-9035-a83538abb8f5",
+            "name": "factura",
+            "containerId": "",
+            "created": "2024-07-17T12:57:53.408Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "938f346a-7d6b-4eef-ab72-869678f5e546",
+            "name": "metodopago",
+            "containerId": "",
+            "created": "2024-07-17T12:58:18.260Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "fefe944c-046f-4588-9f2a-bec80e9687ab",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "62a0c645-a049-4abe-98b0-2c7109f5a1ed",
+            "name": "Cajero",
+            "url": "http://localhost:3000/usuario/loginusuario",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-07-17T12:55:42.052Z",
+            "modified": "2024-07-17T12:55:42.052Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"cajero@gmail.com\",\n\"contrasena\": \"1\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2c5eea9a-2fd0-4c40-88fe-0d7bfed7ab21",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "0a5fc7a3-55f6-40ab-b03d-4eac09992c11",
+            "name": "mostrarproducto",
+            "url": "http://localhost:3000/producto/18",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-17T12:56:15.237Z",
+            "modified": "2024-07-17T12:56:15.237Z",
+            "headers": []
+        },
+        {
+            "_id": "0820fdd2-7f8c-45f2-bfeb-9b388142cf1a",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "9f8bc107-86b0-49e1-a774-c7f274e8a05f",
+            "name": "mostrarusuario",
+            "url": "http://localhost:3000/usuario",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-17T12:57:03.589Z",
+            "modified": "2024-07-17T12:57:03.589Z",
+            "headers": []
+        },
+        {
+            "_id": "67815066-e4f5-4f7c-b111-6a3a55ef4d17",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "4db1a2c5-35ee-4488-ac44-de42295ba330",
+            "name": "mostrarproveedor",
+            "url": "http://localhost:3000/proveedor/34",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-17T12:57:35.915Z",
+            "modified": "2024-07-17T12:57:35.915Z",
+            "headers": []
+        },
+        {
+            "_id": "7c21f4b3-e3d7-4982-ba9d-a2166de9cfb8",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "c9a5ae56-f092-4fc6-9035-a83538abb8f5",
+            "name": "mostrarfactura",
+            "url": "http://localhost:3000/factura/78",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-17T12:57:58.851Z",
+            "modified": "2024-07-17T12:57:58.851Z",
+            "headers": []
+        },
+        {
+            "_id": "0faed44e-933f-4a0a-b260-3b309fbfae6e",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "938f346a-7d6b-4eef-ab72-869678f5e546",
+            "name": "mostrarmetopago",
+            "url": "http://localhost:3000/metopago/1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-17T12:58:23.507Z",
+            "modified": "2024-07-17T12:58:23.507Z",
+            "headers": []
+        },
+        {
+            "_id": "dc830a7b-1ede-47a1-87c8-7a7083aa5a7b",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "62a0c645-a049-4abe-98b0-2c7109f5a1ed",
+            "name": "gerente",
+            "url": "http://localhost:3000/usuario/loginusuario",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-17T12:55:43.805Z",
+            "modified": "2024-07-17T12:55:43.805Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"juan1@gmail.com\",\n  \"contrasena\": \"1\" \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "3e7125f5-0645-457c-a4ab-c71db622f330",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "0a5fc7a3-55f6-40ab-b03d-4eac09992c11",
+            "name": "listarproducto",
+            "url": "http://localhost:3000/producto",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-17T12:56:20.157Z",
+            "modified": "2024-07-17T12:56:20.157Z",
+            "headers": []
+        },
+        {
+            "_id": "722dec1d-02c9-431e-8ff2-a6f2e72c33d6",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "9f8bc107-86b0-49e1-a774-c7f274e8a05f",
+            "name": "listarusuario",
+            "url": "http://localhost:3000/usuario",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-17T12:57:08.194Z",
+            "modified": "2024-07-17T12:57:08.194Z",
+            "headers": []
+        },
+        {
+            "_id": "3832781b-d932-4c22-b1b4-e44f6a41b604",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "4db1a2c5-35ee-4488-ac44-de42295ba330",
+            "name": "listarproveedor",
+            "url": "http://localhost:3000/proveedor",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-17T12:57:41.548Z",
+            "modified": "2024-07-17T12:57:41.548Z",
+            "headers": []
+        },
+        {
+            "_id": "7f2cb805-2ad2-4ff2-87d6-a26e5406cdba",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "c9a5ae56-f092-4fc6-9035-a83538abb8f5",
+            "name": "listarfactura",
+            "url": "http://localhost:3000/factura",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-17T12:58:00.635Z",
+            "modified": "2024-07-17T12:58:00.635Z",
+            "headers": []
+        },
+        {
+            "_id": "b92dd206-43d5-4e5e-a1e6-3b3d92863dd4",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "938f346a-7d6b-4eef-ab72-869678f5e546",
+            "name": "listarmetopago",
+            "url": "http://localhost:3000/metopago",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-17T12:58:36.649Z",
+            "modified": "2024-07-17T12:58:36.649Z",
+            "headers": []
+        },
+        {
+            "_id": "8ec5d75c-f052-4aaf-8fd0-188a9679d4ab",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "0a5fc7a3-55f6-40ab-b03d-4eac09992c11",
+            "name": "crearproducto",
+            "url": "http://localhost:3000/producto",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-17T12:56:24.947Z",
+            "modified": "2024-07-17T12:56:24.947Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"producto\": \"carne\",\n  \"categoria\": \"tienda\",\n  \"preciou\": 10000,\n  \"descripcion\": \"carne asada de segunda\",\n  \"stock\": 12\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2f2b40ac-4697-4b97-918f-7a62c6aea6ab",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "9f8bc107-86b0-49e1-a774-c7f274e8a05f",
+            "name": "crearusuario",
+            "url": "http://localhost:3000/usuario",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-17T12:57:11.844Z",
+            "modified": "2024-07-17T12:57:11.844Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"identificacion\": 12,\n  \"nombres\": \"cajero\",\n  \"telefono\": \"3188142126\",\n  \"correo\": \"cajero@gmail.com\",\n  \"contrasena\": \"1\",\n  \"rol\": \"Cajero\",\n  \"estado\": \"pazys\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5abad22e-982f-446e-a4e9-d36c668ce288",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "4db1a2c5-35ee-4488-ac44-de42295ba330",
+            "name": "crearproveedor",
+            "url": "http://localhost:3000/proveedor",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-17T12:57:45.052Z",
+            "modified": "2024-07-17T12:57:45.052Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"proveedor\": \"sushi\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "50a4b6cf-d48c-4d73-98e7-2885072a71a4",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "938f346a-7d6b-4eef-ab72-869678f5e546",
+            "name": "crearmetopago",
+            "url": "http://localhost:3000/metopago",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-17T12:58:38.338Z",
+            "modified": "2024-07-17T12:58:38.338Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipopago\": \"hola\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "591cc062-8852-43ef-93af-a5cfde69c819",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "0a5fc7a3-55f6-40ab-b03d-4eac09992c11",
+            "name": "modificarproducto",
+            "url": "http://localhost:3000/producto/62",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-07-17T12:56:30.493Z",
+            "modified": "2024-07-17T12:56:30.493Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"producto\": \"papitas margarita\",\n  \"categoria\": \"Tienda\",\n  \"preciou\": 1000,\n  \"descripcion\": \"papas de buena calidad y natural\",\n  \"stock\": 10\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "cd78acc2-313b-4173-8c82-0d400eb5d8b2",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "9f8bc107-86b0-49e1-a774-c7f274e8a05f",
+            "name": "modificarusuario",
+            "url": "http://localhost:3000/usuario/124",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-07-17T12:57:15.340Z",
+            "modified": "2024-07-17T12:57:15.340Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTg0MTU1OTgsImV4cCI6MTcxODQxNTYzOH0.ZbrWU-9rd-_MMFN1JRfW4GACcUdF71FwQTpfuKXD4i0"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"identificacion\": 9,\n  \"nombres\": \"Jhoan\",\n  \"telefono\": \"3188374071\",\n  \"contrasena\": \"1\",\n  \"rol\": \"Gerente\",\n  \"estado\": \"Pagado\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f5f18f8b-b423-47e6-a945-6e62aa4997fd",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "4db1a2c5-35ee-4488-ac44-de42295ba330",
+            "name": "eliminarproveedor",
+            "url": "http://localhost:3000/proveedor/40",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-07-17T12:57:46.803Z",
+            "modified": "2024-07-17T12:57:46.803Z",
+            "headers": []
+        },
+        {
+            "_id": "c152d23e-5199-4827-950d-6d93718eb90a",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "938f346a-7d6b-4eef-ab72-869678f5e546",
+            "name": "eliminarmetodopago",
+            "url": "http://localhost:3000/metopago/30",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-07-17T12:58:39.882Z",
+            "modified": "2024-07-17T12:58:39.882Z",
+            "headers": []
+        },
+        {
+            "_id": "ccf31236-b6b7-4721-a7c9-a85ba3526ed3",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "0a5fc7a3-55f6-40ab-b03d-4eac09992c11",
+            "name": "eliminarproducto",
+            "url": "http://localhost:3000/producto/62",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-07-17T12:56:36.106Z",
+            "modified": "2024-07-17T12:56:36.106Z",
+            "headers": []
+        },
+        {
+            "_id": "5a0e89ae-cce8-4f6e-af24-6436fd3059e6",
+            "colId": "8dc3829e-a820-401e-9cc4-e0cdc323e188",
+            "containerId": "9f8bc107-86b0-49e1-a774-c7f274e8a05f",
+            "name": "eliminarusuario",
+            "url": "http://localhost:3000/usuario/92",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-07-17T12:57:18.666Z",
+            "modified": "2024-07-17T12:57:18.666Z",
+            "headers": []
+        }
+    ],
+    "ref": "dqr-tjTKni9BOcA3nODKGo6L9HGlqymJBRHXg_d6tmGiuU3q0pEGmB3ZO3BCaaeQO442dW30gRYR_Oa4KwFp7A"
+}
