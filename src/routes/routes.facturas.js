@@ -16,4 +16,5 @@ rutaFactura.get("/", listarFactura);
 rutaFactura.post("/", crearFactura);
 rutaFactura.put("/:id", actualizarEstado);
 
+
 export default rutaFactura;
